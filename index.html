@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Shooes Filter Project</title>
+</head>
+
+<body>
+    <div class="container-fluid w-[100%]  bg-[#F1F2F4] flex flex-col items-center ">
+        <!-- header -->
+        <div class="header w-full h-[10%] bg-white flex  justify-between ">
+            <div class="logo  ">
+                <img class="w-[80%] mt-2 "
+                    src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg"
+                    alt="" class="py-2.5 px-4  mt-1 ">
+            </div>
+            <div class="search bar w-[50%] relative flex items-center justify-between">
+                <input class="my-2.5 bg-[#F0F5FF] h-[60%] w-[100%] rounded-[5px] text-[1.5vw]" onclick="animateFilter()"
+                    type="text" placeholder="     Enter the product">
+                <div class=" w-4 h-4 overflow-hidden absolute right-[1vw]">
+                    <i class="serch_icon ri-search-line  text-gray-400 absolute mt-[-0.4vw]  "></i>
+                </div>
+            </div>
+            <div class=" icons w-[35%]  flex items-center justify-between">
+                <div class="login flex items-center justify-between w-[20%] px-3">
+                    <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg"
+                        alt="">
+                    <h4 class="mx-1 text-[1.4vw]">Login</h4>
+                </div>
+                <div class="card flex items-center justify-between  w-[20%] px-3">
+                    <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg"
+                        alt="">
+                    <h4 class="mx-1 text-[1.4vw]">Cart</h4>
+                </div>
+                <div class="seller flex items-center justify-between  w-[40%] px-3">
+                    <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/Store-9eeae2.svg"
+                        alt="">
+                    <h4 class="mx-[5px] text-[1.4vw]">Become a Seller</h4>
+                </div>
+                <div class="hamburger flex items-center justify-between w-[20%] px-3">
+                    <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_3verticalDots-ea7819.svg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- section -->
+        <div class=" mt-2 mx-2 categories w-[98%] h-[20%] bg-white flex items-center justify-center px-[10%]">
+
+            <div class="box w-[20%] h-[95%]  flex flex-col items-center justify-center">
+                <div class="img  w-[50%]">
+                    <img src="https://rukminim2.flixcart.com/flap/80/80/image/29327f40e9c4d26b.png?q=100" alt=""
+                        class="object-cover">
+                </div>
+                <h2 class="mt-[-6px] text-[1vw]">Grocery</h2>
+
+            </div>
+            <div class="box w-[20%] h-[95%]  flex flex-col items-center justify-center">
+                <div class="img  w-[50%]">
+                    <img src="https://rukminim2.flixcart.com/flap/80/80/image/22fddf3c7da4c4f4.png?q=100" alt=""
+                        class="object-cover">
+                </div>
+                <h2 class="text-[1vw]">Mobiles</h2>
+            </div>
+            <div class="box w-[20%] h-[95%]  flex flex-col items-center justify-center">
+                <div class="img  w-[50%]">
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/80/80/image/0d75b34f7d8fbcb3.png?q=100" alt=""
+                        class="object-cover">
+                </div>
+                <h2 class="mt-[2px] text-[1vw]">Fassion</h2>
+            </div>
+            <div class="box w-[20%] h-[95%]  flex flex-col items-center justify-center">
+                <div class="img  w-[50%]">
+                    <img src="https://rukminim2.flixcart.com/flap/490/460/image/913e96c334d04395.jpg?q=20" alt=""
+                        class="object-cover">
+                </div>
+                <h2 class="mt-[2px] text-[1vw]">Electronics</h2>
+            </div>
+            <div class="box w-[20%] h-[95%]  flex flex-col items-center justify-center">
+                <div class="img  w-[50%]">
+                    <img src="https://rukminim2.flixcart.com/flap/80/80/image/ab7e2b022a4587dd.jpg?q=100" alt=""
+                        class="object-cover">
+                </div>
+                <h2 class="text-[1vw]">Furnituare</h2>
+            </div>
+            <div class="box w-[20%] h-[95%]  flex flex-col items-center justify-center">
+                <div class="img  w-[50%]">
+                    <img src="https://rukminim2.flixcart.com/flap/80/80/image/29327f40e9c4d26b.png?q=100" alt=""
+                        class="object-cover">
+                </div>
+                <h2 class="text-[1vw]">Grocery</h2>
+            </div>
+            <div class="box w-[20%] h-[95%]  flex flex-col items-center justify-center">
+                <div class="img  w-[50%]">
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/80/80/image/0139228b2f7eb413.jpg?q=100" alt=""
+                        class="object-cover">
+                </div>
+                <h2 class="text-[1vw]">Appliances</h2>
+            </div>
+            <div class="box w-[20%] h-[95%]  flex flex-col items-center justify-center">
+                <div class="img  w-[50%]">
+                    <img src="https://rukminim2.flixcart.com/flap/80/80/image/71050627a56b4693.png?q=100" alt=""
+                        class="object-cover">
+                </div>
+                <h2 class="text-[1vw]">Travel</h2>
+            </div>
+            <div class="box w-[20%] h-[95%]  flex flex-col items-center justify-center">
+                <div class="img  w-[50%]">
+                    <img src="https://rukminim2.flixcart.com/flap/80/80/image/dff3f7adcf3a90c6.png?q=100" alt=""
+                        class="object-cover">
+                </div>
+                <h2 class="text-[1vw]">Toies</h2>
+            </div>
+
+        </div>
+
+        <div class="data w-[98%] mt-2 mx-2   gap-2">
+            <div class="heading mt-3 mx-3 flex justify-center items-center">
+                <h2 class=" shooes text-center text-[5vh] uppercase">SHOP what you like</h2>
+            </div>
+            <div class="product flex flex-wrap justify-center items-center mt-4 mx-1   gap-5">
+            </div>
+
+            <!-- filter -->
+            <div class=" filter flex  items-start justify-center relative ">
+                <div
+                    class="open w-[30opx] h-[600px] bg-[#fff] z-[300] fixed top-[0%] opacity-0 flex  flex-col  justify-center">
+                    <div class="w-full h-[5%]  mt-[5%] ">
+                        <h1 class=" text-center font-bold text-[15px]">SEARCH WHAT YOU NEED</h1>
+                    </div>
+                    <div class="search_input w-full h-[10%]  py-4 text-center px-6 ">
+                        <input type="text" placeholder="Search Shoes"
+                            class="text-center text-[2.5vh] input_search w-full h-[120%]"
+                            onkeyup="filldata('brand',this.value),selectData()">
+                    </div>
+                    <div class="w-full h-[5%]   ">
+                        <h1 class=" text-center font-semibold text-[15px]">SELECT PRICE RANGE</h1>
+                    </div>
+                    <div class="w-full h-[15%]  prices flex items-center justify-between">
+                        <div class="min w-full h-[80%]  flex flex-col items-center justify-center py-1">
+                            <div class="text-start font-semibold text-[90%]">Min Price :</div>
+                            <input type="number" name="" class="input w-[50%] h-[50%]"
+                                onkeyup="filldata('minPrice',this.value),selectData()">
+                        </div>
+                        <div class="max w-full h-[80%]  flex flex-col items-center justify-center py-1">
+                            <div class="text-start font-semibold text-[90%]">Max Price : </div>
+                            <input type="number" name="" class="input w-[50%] h-[50%]"
+                                onkeyup="filldata('maxPrice',this.value),selectData()">
+                        </div>
+
+                    </div>
+                    <div class="w-full h-[5%]  mt-[1%] ">
+                        <h1 class=" text-center font-semibold text-[15px]">SELECT BRAND</h1>
+                    </div>
+                    <div class="Brand flex flex-wrap items-center justify-start gap-1 mr-3">
+                        <div class="flex gap-2">
+                            <label class="ml-6 text-[90%]" for="">Puma</label>
+                            <input type="radio" name="Brand" onchange="filldata('companyName','puma'), selectData()">
+                        </div>
+                        <div class="flex gap-2">
+                            <label class="ml-6 text-[90%]" for="">Sparks</label>
+                            <input type="radio" name="Brand" onchange="filldata('companyName','sparks'), selectData()">
+                        </div>
+                        <div class="flex gap-2">
+                            <label class="ml-6 text-[90%]" for="">Nike</label>
+                            <input type="radio" name="Brand" onchange="filldata('companyName','nike'), selectData()">
+                        </div>
+                        <div class="flex gap-2">
+                            <label class="ml-6 text-[90%]" for="">Adidas</label>
+                            <input type="radio" name="Brand" onchange="filldata('companyName','adidas'), selectData()">
+                        </div>
+                        <div class="flex gap-2">
+                            <label class="ml-6 text-[90%]" for="">All</label>
+                            <input type="radio" name="Brand" onchange="filldata('companyid','all'),display_All()">
+                        </div>
+                    </div>
+                    <div class="w-full h-[5%]  mt-[1%] ">
+                        <h1 class=" text-center font-semibold text-[15px]">SELECT COLOR</h1>
+                    </div>
+                    <div class="color">
+
+                        <div class="color flex  flex-wrap items-center justify-start gap-2">
+                            <h2 class="ml-6 text-[90%]">Red</h2><input type="checkbox" name="red"
+                                onchange="cheakedData(),selectData()" ondblclick="display_All()">
+                            <h2 class="ml-6 text-[90%]">Black</h2><input type="checkbox" name="black"
+                                onchange="cheakedData(),selectData()" ondblclick="display_All()">
+                        </div>
+                        <div class="color flex items-center justify-start gap-2 mt-2">
+                            <h2 class="ml-6 text-[90%]">White</h2><input type="checkbox" name="white"
+                                onchange="cheakedData(),selectData()" ondblclick="display_All()">
+                            <h2 class="ml-6 text-[90%]">Blue</h2><input type="checkbox" name="blue"
+                                onchange="cheakedData(),selectData()" ondblclick="display_All()">
+                        </div>
+                    </div>
+                    <div class="w-full h-[5%]  mt-[1%] ">
+                        <h1 class=" text-center font-semibold text-[15px]">SELECT SIZE</h1>
+                    </div>
+                    <div class="size">
+
+                        <div class="size flex  flex-wrap items-center justify-start gap-2">
+                            <h2 class="ml-6 text-[90%]">6</h2><input type="radio" name="size" value="6" class="sizes"
+                                onchange="checkedSize(),selectData()">
+                            <h2 class="ml-6 text-[90%]">7</h2><input type="radio" name="size" value="7" class="sizes"
+                                onchange="checkedSize(),selectData()">
+                            <h2 class="ml-6 text-[90%]">8</h2><input type="radio" name="size" value="8" class="sizes"
+                                onchange="checkedSize(),selectData()">
+                            <h2 class="ml-6 text-[90%]">9</h2><input type="radio" name="size" value="9" class="sizes"
+                                onchange="checkedSize(),selectData()">
+                        </div>
+                    </div>
+
+                    <div class="button mt-3 flex items-center  mt-[50px] justify-center">
+                        <button type="button" onclick="closeAnimateFilter()"
+                            class="btn w-[70px] h-[30px] bg-blue-600 text-white font-bold rounded-[10px] text-[90%]">SEARCH</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
